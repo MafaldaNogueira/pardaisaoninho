@@ -1,0 +1,247 @@
+:root {
+    --light-text: #fff;
+    --dark: #000000;
+    --classic: #c06c2c;
+
+    --font-w-light: 300;
+    --font-w-bold: 700;
+    --font-w-std: 500;
+}
+
+html {
+    font-size: 15px;
+}
+
+
+
+body {
+    color: var(--dark);
+    font-weight: var(--font-w-light);
+    font-size: 1rem;
+    line-height: 2;
+}
+
+
+.bold, b, .bolder, strong {
+    font-weight: var(--font-w-bold);
+}
+
+.classic {
+    color: var(--classic);
+}
+
+.bg-main {
+    background-image: url("./images/imagem-header.jpg");
+    height: 40rem;
+    margin-top: -6rem;
+    background-position: right;
+    background-size: cover;
+}
+
+.marry {
+    position: absolute;
+    top: 15rem;
+}
+.marry img {
+    width: 100%;
+}
+
+
+span.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23cc5200' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+    height: 2rem;
+    width: 86px;
+ }
+
+span.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23cc5200' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+    height: 2rem;
+    width: 86px;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+.wedding-carousel {
+margin-top: 1rem;
+}
+
+
+/* ------------------------------------NAVBAR------------------------------*/
+.logo {
+    height: 1.6rem;
+    padding-left: 2rem;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0.6rem;
+
+}
+.navbar-toggler.collapsed, .navbar-toggler {
+    z-index: 1000000000000000;
+}
+.navbar-collapse {
+    z-index: 1000;
+    width: 60vw;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: rgba(1, 1, 1, 0.6);
+    padding: 1rem;
+
+}
+
+.navbar-nav {
+    padding-top: 1rem;
+}
+.nav-link {
+    color: var(--light-text) !important;
+}
+
+.navbar-collapse li:first-of-type {
+    margin-top: 2rem;
+}
+
+.navbar-collapse li {
+    padding-bottom: 2.5rem;
+}
+
+.navbar-collapse a {
+    color: var(--light-text);
+    font-size: 1.2rem;
+    text-decoration: none;
+    line-height: 1
+}
+
+
+.navbar i.nav-action-icon {
+    color: black;
+    font-size: 2rem;
+}
+
+
+
+.navbar-collapse ul {
+    margin-top: 3rem;
+}
+
+.navbar-toggler:focus, .navbar button {
+    box-shadow: unset;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        justify-content: flex-start;
+    }
+    .bg-main {
+        height: 59rem;
+    }
+    .logo {
+        height: 2rem;
+    }
+
+    .navbar-collapse {
+        padding: 0;
+        position: unset;
+        background-color: unset;
+        float: right;
+
+    }
+
+    .navbar-collapse a {
+        color: var(--dark);
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+
+    .navbar-collapse ul {
+        margin-top: unset;
+    }
+
+    .navbar-collapse li {
+        margin-top: unset !important;
+        padding-bottom: unset;
+        margin-right: 1.2rem;
+    }
+
+    .date-img {
+        position: absolute;
+        z-index: 10;
+    }
+}
+
+
+
+/* -------------------- INFO --------------------- */
+
+.date-img {
+    margin-top: -4rem;
+    width: 15rem;
+}
+
+.hours {
+    color: var(--classic);
+    font-size: 3.7rem;
+    margin-bottom: 0;
+}
+
+.until-sun {
+    width: 14rem;
+}
+
+.info-div {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.lh-1 {
+    line-height: 1 !important;
+}
+
+.lh-2 {
+    line-height: 1.4;
+}
+
+.wtv {
+    padding-top: 4rem;
+    background-image:
+         linear-gradient(to top, rgba(245, 246, 252, -0.48), white),
+            url('images/20.jpg');
+    height: 40rem;
+    background-size: cover;
+    color: white;
+    background-position: center;
+}
+
+.contacts i {
+    color: var(--classic);
+    font-size: 1.2rem;
+}
+
+.contacts a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+h1, h2 {
+    color: var(--classic);
+    font-weight: var(--font-w-light);
+}
+
+
+hr {
+    border: 2px solid var(--classic);
+    width: 70%;
+    margin: 0 auto;
+}
+
+.map_church iframe {
+    width: 100%;
+}
