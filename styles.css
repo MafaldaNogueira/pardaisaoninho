@@ -3,9 +3,10 @@
     --dark: #000000;
     --classic: #c06c2c;
 
-    --font-w-light: 300;
-    --font-w-bold: 700;
-    --font-w-std: 500;
+    --font-w-light: 200;
+    --font-w-bold: 600;
+    --font-w-extra-bold: 800;
+    --font-w-std: 400;
 }
 
 html {
@@ -19,9 +20,13 @@ body {
     font-weight: var(--font-w-light);
     font-size: 1rem;
     line-height: 2;
+    font-family: 'Raleway', sans-serif;
+
 }
 
-
+.extra-bold {
+    font-weight: var(--font-w-extra-bold);
+}
 .bold, b, .bolder, strong {
     font-weight: var(--font-w-bold);
 }
@@ -222,12 +227,17 @@ margin-top: 1rem;
 
 .contacts i {
     color: var(--classic);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
-.contacts a {
+.contacts a, .info-div a {
     text-decoration: none;
     color: var(--dark);
+}
+
+.info-div a:hover {
+    color: var(--classic);
+   font-weight: var(--font-w-bold);
 }
 
 h1, h2 {
@@ -244,4 +254,10 @@ hr {
 
 .map_church iframe {
     width: 100%;
+}
+
+
+
+ul {
+    list-style-type: none;
 }
