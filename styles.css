@@ -48,8 +48,10 @@ body {
     top: 15rem;
 }
 .marry img {
-    width: 100%;
+    width: 90%;
 }
+
+
 
 
 span.carousel-control-next-icon {
@@ -65,13 +67,30 @@ span.carousel-control-prev-icon {
 }
 
 .navbar-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(192, 108, 44)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 
-.wedding-carousel {
-margin-top: 1rem;
+
+#carouselExampleControls {
+    z-index: -2;
 }
+
+.wed-navbar {
+    width: 100%;
+    position: fixed;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-active {
+    background-color: rgba(1, 1, 1, 0.5);
+    box-shadow: 5px -1px 12px -5px grey;
+}
+
+
+
+
+
 
 
 /* ------------------------------------NAVBAR------------------------------*/
@@ -84,28 +103,30 @@ margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 0.6rem;
+    margin-top: 6rem;
+    position: fixed;
 
 }
 .navbar-toggler.collapsed, .navbar-toggler {
+    padding-top: 0.5rem;
     z-index: 1000000000000000;
 }
 .navbar-collapse {
     z-index: 1000;
-    width: 60vw;
+    width: 50vw;
     position: fixed;
     right: 0;
     top: 0;
-    background: rgba(1, 1, 1, 0.6);
     padding: 1rem;
-
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-nav {
     padding-top: 1rem;
 }
 .nav-link {
-    color: var(--light-text) !important;
+    color: var(--classic) !important;
+    font-weight: var(--font-w-bold);
 }
 
 .navbar-collapse li:first-of-type {
@@ -113,7 +134,7 @@ margin-top: 1rem;
 }
 
 .navbar-collapse li {
-    padding-bottom: 2.5rem;
+    padding-bottom: 1rem;
 }
 
 .navbar-collapse a {
@@ -123,17 +144,11 @@ margin-top: 1rem;
     line-height: 1
 }
 
-
 .navbar i.nav-action-icon {
     color: black;
     font-size: 2rem;
 }
 
-
-
-.navbar-collapse ul {
-    margin-top: 3rem;
-}
 
 .navbar-toggler:focus, .navbar button {
     box-shadow: unset;
@@ -144,12 +159,14 @@ margin-top: 1rem;
         justify-content: flex-start;
     }
     .bg-main {
-        height: 59rem;
+        height: 82rem;
     }
     .logo {
         height: 2rem;
     }
-
+    .wedding-carousel {
+        margin-top: 7rem;
+    }
     .navbar-collapse {
         padding: 0;
         position: unset;
@@ -157,7 +174,12 @@ margin-top: 1rem;
         float: right;
 
     }
-
+    .wtv {
+        padding-top: 4rem;
+        background-image: url('images/bottom-shot-min.jpg');
+        height: 55rem !important;
+        background-size: cover;
+    }
     .navbar-collapse a {
         color: var(--dark);
         font-size: 1.2rem;
@@ -177,6 +199,11 @@ margin-top: 1rem;
     .date-img {
         position: absolute;
         z-index: 10;
+        width: 14rem !important;
+    }
+    .nav-link {
+        color: var(--light-text) !important;
+        font-weight: var(--font-w-light);
     }
 }
 
@@ -185,8 +212,8 @@ margin-top: 1rem;
 /* -------------------- INFO --------------------- */
 
 .date-img {
-    margin-top: -4rem;
-    width: 15rem;
+    margin-top: -3rem;
+    width: 100%;
 }
 
 .hours {
@@ -196,7 +223,7 @@ margin-top: 1rem;
 }
 
 .until-sun {
-    width: 14rem;
+    width: 14rem !important;
 }
 
 .info-div {
@@ -206,6 +233,10 @@ margin-top: 1rem;
     font-size: 0.9rem;
 }
 
+.info-div img {
+    width: 2rem;
+}
+
 .lh-1 {
     line-height: 1 !important;
 }
@@ -213,21 +244,15 @@ margin-top: 1rem;
 .lh-2 {
     line-height: 1.4;
 }
-
-.wtv {
-    padding-top: 4rem;
-    background-image:
-         linear-gradient(to top, rgba(245, 246, 252, -0.48), white),
-            url('images/20.jpg');
-    height: 40rem;
-    background-size: cover;
-    color: white;
-    background-position: center;
+.lh-3 {
+    line-height: 2;
 }
+
+
 
 .contacts i {
     color: var(--classic);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .contacts a, .info-div a {
@@ -246,11 +271,6 @@ h1, h2 {
 }
 
 
-hr {
-    border: 2px solid var(--classic);
-    width: 70%;
-    margin: 0 auto;
-}
 
 .map_church iframe {
     width: 100%;
@@ -260,4 +280,21 @@ hr {
 
 ul {
     list-style-type: none;
+}
+
+#howtogo a {
+    text-decoration: none;
+    color: var(--classic);
+    font-weight: var(--font-w-bold);
+}
+#howtogo a:hover {
+    font-weight: var(--font-w-extra-bold);
+}
+
+.wtv {
+    padding-top: 4rem;
+    background-image: url('images/bottom-shot-min.jpg');
+    height: 25rem;
+    background-size: cover;
+    background-position: center;
 }
